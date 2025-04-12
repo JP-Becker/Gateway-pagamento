@@ -24,7 +24,7 @@ func (h *AccountHandler) Create(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	output, err := h.accountService.CreatAccount(input)
+	output, err := h.accountService.CreateAccount(input)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
