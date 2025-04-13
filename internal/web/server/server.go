@@ -24,7 +24,7 @@ func NewServer(accountService *service.AccountService, port string) *Server {
 }
 
 func (s *Server) ConfigureRoutes() {
-	accountHandler := handlers.NewAccountHadnler(s.accountService)
+	accountHandler := handlers.NewAccountHandler(s.accountService)
 
 	s.router.Post("/accounts", accountHandler.Create)
 	s.router.Get("/accounts", accountHandler.Get)

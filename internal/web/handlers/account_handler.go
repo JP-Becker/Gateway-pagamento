@@ -12,7 +12,7 @@ type AccountHandler struct {
 	accountService *service.AccountService
 }
 
-func NewAccountHadnler(accountService *service.AccountService) *AccountHandler {
+func NewAccountHandler(accountService *service.AccountService) *AccountHandler {
 	return &AccountHandler{accountService: accountService}
 }
 
