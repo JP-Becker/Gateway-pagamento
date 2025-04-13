@@ -10,6 +10,8 @@ import (
 	"github.com/JP-Becker/Gateway-pagamento/internal/service"
 	"github.com/JP-Becker/Gateway-pagamento/internal/web/server"
 	"github.com/joho/godotenv"
+	_ "github.com/lib/pq" // Importa o driver do postgres, tem o underline pq não vai ser usado diretamente,
+	// só o docker vai usar
 )
 
 func getEnv(key, defaultValue string) string {
