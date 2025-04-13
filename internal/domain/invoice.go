@@ -35,13 +35,13 @@ type CreditCard struct {
 	CardholderName string
 }
 
-func NewInvoice(accountID string, amount float64, description string, paymentType string, card string) (*Invoice, error) {
+func NewInvoice(accountID string, amount float64, description string, paymentType string, card CreditCard) (*Invoice, error) {
 	if amount <= 0 {
 		return nil, ErrInvalidAmount
 	}
 
 	// vai pegar os dados das ultimas 4 posições da string
-	lastDigits := card[len(card)-4:]
+	lastDigits := card.Number[len(card.Number)-4:]
 
 	return &Invoice{
 		ID:             uuid.New().String(),
