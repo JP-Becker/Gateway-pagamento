@@ -38,8 +38,8 @@ func (s *Server) ConfigureRoutes() {
 	// ou seja, só vão ser acessadas se o middleware não retornar erro
 	s.router.Group(func(r chi.Router) {
 		r.Use(authMiddleware.Authenticate)
-		r.Post("/invoice", accountHandler.Get)
-		r.Get("/invoices/{id}", invoiceHandler.GetByID)
+		r.Post("/invoice", invoiceHandler.Create)
+		r.Get("/invoice/{id}", invoiceHandler.GetByID)
 		r.Get("/invoice", invoiceHandler.ListByAccount)
 	})
 

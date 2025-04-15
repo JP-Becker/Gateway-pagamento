@@ -8,8 +8,8 @@ POST {{baseUrl}}/accounts
 Content-Type: application/json
 
 {
-    "name": "John Doe",
-    "email": "john@aaaa.com"
+    "name":  "ascxxxx",
+    "email": "xsazs@aaaa.com"
 }
 
 ### Obter dados da conta
@@ -31,7 +31,7 @@ X-API-Key: {{apiKey}}
     "cvv": "123",
     "expiry_month": 12,
     "expiry_year": 2025,
-    "cardholder_name": "John Doe"
+    "cardholder_name": "jao Doe"
 }
 
 ### Obter uma fatura específica

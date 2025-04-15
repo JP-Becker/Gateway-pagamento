@@ -45,7 +45,7 @@ func ToInvoice(input CreateInvoiceInput, accountID string) (*domain.Invoice, err
 		CardholderName: input.CardholderName,
 	}
 
-	return domain.NewInvoice(input.APIKey, input.Amount, input.Description, input.PaymentType, card)
+	return domain.NewInvoice(accountID, input.Amount, input.Description, input.PaymentType, card)
 }
 
 func FromInvoice(invoice *domain.Invoice) *InvoiceOutput {
