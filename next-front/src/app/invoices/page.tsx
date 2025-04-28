@@ -35,7 +35,7 @@ const invoices = [
   },
 ]
 
-export default function DashboardPage() {
+export default function InvoicesPage() {
   const [startDate, setStartDate] = useState("")
   const [endDate, setEndDate] = useState("")
   const [status, setStatus] = useState("Todos")
@@ -43,7 +43,7 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#1a202c]">
-      <Header />
+      {/* <Header /> */}
       <main className="flex-1 p-6">
         <div className="max-w-7xl mx-auto bg-[#1e2533] rounded-lg shadow-lg p-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
@@ -52,7 +52,7 @@ export default function DashboardPage() {
               <p className="text-gray-400 mt-1">Gerencie suas faturas e acompanhe os pagamentos</p>
             </div>
             <Button className="mt-4 sm:mt-0 bg-indigo-600 hover:bg-indigo-700 text-white" asChild>
-              <Link href="/dashboard/nova-fatura">
+              <Link href="/invoices/nova-fatura">
                 <Plus className="h-4 w-4 mr-2" />
                 Nova Fatura
               </Link>
@@ -133,7 +133,7 @@ export default function DashboardPage() {
                     <td className="py-4">
                       <div className="flex space-x-2">
                         <Button variant="ghost" size="icon" className="h-8 w-8" asChild>
-                          <Link href={`/dashboard/fatura/${invoice.id.replace("#", "")}`}>
+                          <Link href={`/invoices/fatura/${invoice.id.replace("#", "")}`}>
                             <Eye className="h-4 w-4" />
                           </Link>
                         </Button>

@@ -8,7 +8,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#1a202c]">
-      <Header />
+      {/* <Header /> */}
       <main className="flex-1 flex items-center justify-center p-6">
         <div className="w-full max-w-md bg-[#1e2533] rounded-lg shadow-lg p-8">
           <div className="text-center mb-6">

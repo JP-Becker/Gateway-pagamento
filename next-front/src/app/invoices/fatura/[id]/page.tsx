@@ -52,7 +52,7 @@ export default function InvoiceDetailsPage({ params }: InvoiceDetailsPageProps) 
 
   return (
     <div className="min-h-screen flex flex-col bg-[#1a202c]">
-      <Header />
+      {/* <Header /> */}
       <main className="flex-1 p-6">
         <div className="max-w-7xl mx-auto bg-[#1e2533] rounded-lg shadow-lg p-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">

@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     // Redireciona para o dashboard após a renderização
-    router.push("/dashboard")
+    router.push("/invoices")
   }, [router])
 
   return (

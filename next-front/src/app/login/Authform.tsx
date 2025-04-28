@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight } from "lucide-react";
@@ -8,7 +9,7 @@ export async function loginAction(formData: FormData) {
     'use server';
     const apiKey = formData.get('apiKey');
 
-    const response = await fetch('http://localhost:8081/accounts', {
+    const response = await fetch('http://localhost:8080/accounts', {
       headers: {
         'X-API-KEY': apiKey as string,
       }
@@ -21,7 +22,7 @@ export async function loginAction(formData: FormData) {
     const cookiesStore = await cookies();
     cookiesStore.set('apiKey', apiKey as string) 
 
-    redirect('/dashboard');
+    redirect('/invoices');
 }
 
 

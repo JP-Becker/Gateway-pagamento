@@ -22,11 +22,11 @@ export default function CreateInvoicePage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Aqui você implementaria a lógica para processar o pagamento
-    router.push("/dashboard")
+    router.push("/invoices")
   }
 
   const handleCancel = () => {
-    router.push("/dashboard")
+    router.push("/invoices")
   }
 
   // Calcula valores baseados no valor inserido
@@ -44,7 +44,7 @@ export default function CreateInvoicePage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#1a202c]">
-      <Header />
+      {/* <Header /> */}
       <main className="flex-1 p-6">
         <div className="max-w-7xl mx-auto bg-[#1e2533] rounded-lg shadow-lg p-8">
           <div className="mb-6">
