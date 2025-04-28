@@ -1,12 +1,12 @@
-
+'use server'
 import Link from "next/link"
 import { LogOut } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cookies } from "next/headers"
-import { redirect } from "next/navigation";
+import { redirect } from "next/navigation"
 
 export async function logoutAction() {
-  'use server';
+  'use server'
   const cookiesStore = await cookies();
   cookiesStore.delete('apiKey');
   redirect('/login')
