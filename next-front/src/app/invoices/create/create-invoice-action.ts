@@ -18,7 +18,7 @@ export async function createInvoiceAction(formData: FormData) {
   const cvv = formData.get("cvv");
   const cardholderName = formData.get("cardholderName");
 
-  const response = await fetch("http://app:8080/invoice", {
+  const response = await fetch("http://localhost:8080/invoice", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -27,12 +27,12 @@ export async function createInvoiceAction(formData: FormData) {
     body: JSON.stringify({
       amount: parseFloat(amount as string),
       description,
+      payment_type: "credit_card",
       card_number: cardNumber,
+      cvv,
       expiry_month: parseInt(expiryMonth as string),
       expiry_year: parseInt(expiryYear as string),
-      cvv,
       cardholder_name: cardholderName,
-      payment_type: "credit_card",
     }),
   });
 
